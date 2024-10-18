@@ -1,0 +1,111 @@
+/* CustomStyles.css */
+
+.custom-primary {
+    background-color:#71BBE8;
+    /* Your custom color */
+    color: rgb(175, 20, 20);
+    /* Text color */
+    
+}
+
+.custom-info {
+    background-color: #AE5EA3;
+    /* Your custom color */
+    color: white;
+}
+
+.custom-danger {
+    background-color: #F3758D;
+    /* Your custom color */
+    color: white;
+}
+
+.custom-warning {
+    background-color: #C4D956;
+    color: black;
+    /* Text color */
+}
+
+.custom-success {
+    background-color: #28a745;
+    color: white;
+}
+.circle-logo{
+    height: 42px;
+    width: 42px;
+    background-color: #28a745;
+    border-radius: 50%;
+    background-color: #F15469;
+    margin: 20px auto;
+    
+}
+.aid-bees{
+    background-color: #F05368;
+    color: white;
+    font-size: small;
+  
+   
+}
+
+.circle-font{
+   color: white;
+   font-size:34px;
+   margin-left: 3px;
+}
+.admin-user{
+    margin-left: 70px;
+}
+
+.date-filter{
+  
+}
+
+.form-1{
+    margin-left: 50%;
+}
+.form-2{
+    margin-left: 50%;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stat-icon{
+   
+    width: 25px;
+    
+    color: rgb(42, 42, 156);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link i {
+    transition: transform 0.3s;
+}
+
+.nav-link .fa-chevron-up {
+    transform: rotate(180deg);
+}
+.toglleb{
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .card {
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+}
