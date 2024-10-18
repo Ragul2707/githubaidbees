@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dummy = () => {
   return (
-    <div>Dummy</div>
+    <h1>my name is ragul</h1>
   )
 }
 
