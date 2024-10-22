@@ -1,15 +1,13 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 const NgoUser = () => {
-     const stats = [
-    { title: 'Number of NGOs', count: 102, color: 'primary' },
-    { title: 'Number of Registered Users', count: 653, color: 'info' },
-    { title: 'Number of Active Users', count: 2, color: 'danger' },
-    { title: 'Total Donations', count: '2362260.29', color: 'warning' },
-    { title: 'User Flagged Posts', count: 22, color: 'info' },
-    { title: 'NGO Flagged Posts', count: 26, color: 'danger' },
-    { title: 'Total Number of Donations', count: 903, color: 'success' }
-  ];
+    const [dataa,SetDataa] = useState([]);
+    
+    useEffect(()=>{
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(res=>SetDataa(res.data))
+    })
   return (
    <table class="table table-striped">
   <thead>
@@ -21,12 +19,12 @@ const NgoUser = () => {
     </tr>
   </thead>
   <tbody>
-     {/* Mapping over stats to create table rows */}
-        {stats.map((stat, index) => (
+    
+        {dataa.map((item, index) => (
           <tr key={index}>
-            <th scope="row">{index + 1}</th> {/* Index for Sr.No */}
-            <td>{stat.title}</td>
-            <td>{stat.count}</td>
+            <th scope="row">{index + 1}</th> 
+            <td>{item.company.name}</td>
+            <td>{item.address.suite}</td>
           </tr>
         ))}
    </tbody>
