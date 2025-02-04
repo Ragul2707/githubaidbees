@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaAirbnb, FaUsers, FaClipboardList, FaMoneyBillWave } from 'react-icons/fa';
+import { FaBuilding, FaUsers, FaClipboardList, FaMoneyBillWave,FaAddressBook,FaCopyright,FaBriefcase } from 'react-icons/fa';
 import '../Components/Custom.css'
 import Home from './Home';
 import { Link } from 'react-router-dom';
@@ -20,37 +20,40 @@ const Sidebar = () => {
      <div>
         <div className='aid-bees  ' style={{height:"62px"}}>
             <div className='d-flex'>
-                <i style={{fontSize:"30px"}} class="fa-solid fa-bug mt-3 ms-2 me-2"></i>
+              <div  className='ms-3 mt-2'>
+                  <i style={{fontSize:"40px"}} class="fa-solid fa-computer"></i>
+              </div>
+             
+               
             
-            <h1 className=' '>aid<span>bees</span>
-            <p  style={{fontSize:"10px"}}>The social kindness platform</p></h1>
+            <h1 className='ms-3 '>
+               <a href="https://tekbay.jp/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+               Tekbay
+              </a>
+            <p  style={{fontSize:"11px"}}>"The future is digital."</p></h1>
             </div>
         </div>
-         <div className='bg-light'>
-             
-        <div className='circle-logo '>
-        <div>
-            <h6 className='circle-font'><i class="fa-solid fa-bug"></i></h6> 
+         <div className="bg-light">
+  {/* Animated section with computer-related animation */}
+  <div className="sidebar-header">
+    <div className="animation-container">
+      <i className="fa-solid fa-desktop"></i> {/* Computer-related icon */}
+    </div>
+  </div>
+</div>
 
-        </div> 
-      </div>
-      <div>
-        <h6 className='admin-user '>Admin User</h6>
-      </div>
-        
-         </div>
         
       </div>
     <div className="d-flex flex-column p-3 bg-light">
      
       <ul className="nav nav-pills flex-column mb-auto">
         <li className="nav-item" style={{ borderBottom:"1px solid #EFEFEF" ,borderTop:"1px solid #EFEFEF"}}>
-          < Link to="/dashboard"  className="nav-link" style={{color:"#353535"}}>
-          <i class="fa-solid fa-gauge"></i>  Dashboard 
+          < Link to="/employeelist"  className="nav-link fw-bold" style={{color:"#353535"}}>
+          <i class="fa-regular fa-address-book"></i> Employee list 
           </Link>
         </li>
         <li style={{ borderBottom:"1px solid #EFEFEF"}}>
-          <button  onClick={toggleMasterMenu} href="#" className="nav-link" style={{color:"#353535"}}>
+          <button  onClick={toggleMasterMenu} href="#" className="nav-link fw-bold" style={{color:"#353535"}}>
             <FaClipboardList /> Master <i className={`fa-solid ${isMasterOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
             
           </button>
@@ -58,7 +61,7 @@ const Sidebar = () => {
             {isMasterOpen && (
               <ul className="nav flex-column ms-3">
                 <li className="nav-item">
-                  <Link to='/home' href="#" className="nav-link" style={{ color: "#353535" }}><i class="fa-solid fa-flag-usa"></i> State</Link>
+                  <Link to='' href="#" className="nav-link" style={{ color: "#353535" }}><i class="fa-solid fa-flag-usa"></i> State</Link>
                 
                 </li>
                 <li className="nav-item">
@@ -71,81 +74,41 @@ const Sidebar = () => {
             )}
         </li>
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaUsers /> User Flagged Posts
+          <a href="#" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaUsers /> Explorer
           </a>
         </li>
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaUsers /> NGO Flagged Posts
+          <a href="/consulting" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaUsers /> Consultancy
           </a>
         </li>
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Auditor
+          <a href="service" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaMoneyBillWave /> About Tekbay
           </a>
         </li>
+        
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> NGO
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Organization
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> NGO Reviews
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> User
+          <a href="/service" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaBriefcase /> User
           </a>
         </li>
         <li style={{ borderBottom:"1px solid #EFEFEF"}}>
-          <button onClick={toggleMarketMenu} href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Market Place  <i className={`fa-solid ${isMarketPlace ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
+          <button  href="/company" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaBuilding />Company Profile  <i className={`fa-solid 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
           </button>
-          {isMarketPlace && (
-              <ul className="nav flex-column ms-3">
-                <li className="nav-item">
-                  <a href="#" className="nav-link" style={{ color: "#353535" }}><i class="fa-solid fa-flag-usa"></i> State</a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link" style={{ color: "#353535" }}><i class="fa-solid fa-globe"></i> Country</a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link" style={{ color: "#353535" }}><i class="fa-solid fa-city"></i> City</a>
-                </li>
-              </ul>
-            )}
+         
         </li>
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Contact Us
+          <a href="/copyright" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaCopyright /> Copyrights
           </a>
         </li>
+        
         <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Banner
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Donation Details
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> Commission
-          </a>
-        </li>
-        <li style={{height:"50px", borderBottom:"1px solid #EFEFEF"}}>
-          <a href="#" className="nav-link" style={{color:"#353535"}}>
-            <FaMoneyBillWave /> LogOut
+          <a href="/contact" className="nav-link fw-bold" style={{color:"#353535"}}>
+            <FaAddressBook /> Contact Us
           </a>
         </li>
       </ul>

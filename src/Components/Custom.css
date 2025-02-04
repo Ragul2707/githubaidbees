@@ -15,7 +15,7 @@
 }
 
 .custom-danger {
-    background-color: #F3758D;
+    background-color: #75f3d3;
     /* Your custom color */
     color: white;
 }
@@ -40,7 +40,7 @@
     
 }
 .aid-bees{
-    background-color: #F05368;
+    background-color: #163a4e;
     color: white;
     font-size: small;
   
@@ -99,7 +99,142 @@
     cursor: pointer;
 }
 
-@media (max-width: 576px) {
+
+
+/* Custom.css */
+
+/* Unique class for the animated section */
+.sidebar-header {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    /* Adjust the height */
+    background: linear-gradient(45deg, #56ccf2, #6e7bff, #f7b731, #f86c6b);
+    /* Colorful gradient */
+    background-size: 400% 400%;
+    animation: gradientAnimation 12s ease infinite;
+    /* Animation for smooth color transition */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.animation-container i {
+    font-size: 60px;
+    /* Computer icon size */
+    color: white;
+    animation: pulsatingAnimation 2s infinite;
+    /* Pulsating animation for glowing effect */
+}
+
+/* Animation to create a glowing/pulsating effect */
+@keyframes pulsatingAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Basic styling for nav items */
+.nav-item {
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+}
+
+/* Styling for nav links */
+.nav-link {
+    color: #353535;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #f05368;
+    /* Change color on hover */
+    font-size: 18px;
+    /* Increase font size on hover */
+    transform: scale(1.05);
+    /* Slightly scale up the link for a more interactive feel */
+}
+
+/* Active nav-link styling (optional if you have an active class) */
+.nav-link.active {
+    color: #007bff;
+    /* Blue color for active item */
+    font-weight: bold;
+}
+
+/* Styling for dropdown buttons */
+button.nav-link {
+    background-color: transparent;
+    border: none;
+    color: #353535;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button.nav-link:hover {
+    color: #f05368;
+    font-size: 18px;
+    transform: scale(1.05);
+}
+
+/* Add shadow effect on hover */
+.nav-link:hover {
+    color: #f05368;
+    font-size: 18px;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+}
+
+/* Optional: Create a glowing effect */
+.nav-link:hover {
+    color: #f05368;
+    font-size: 18px;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #f05368, 0 0 20px #f05368;
+    /* Glow effect */
+}
+/* @media (max-width: 576px) {
     .card {
         height: auto;
         margin-bottom: 15px;
@@ -108,4 +243,201 @@
     .card-body {
         padding: 10px;
     }
+} */
+
+/* Unique class for the Services section */
+.service-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the main title "Services" */
+.service-title {
+    font-size: 2rem;
+    /* Large font size for emphasis */
+    font-weight: 100;
+    color: #007bff;
+    /* Blue color for Tekbay */
+    margin-bottom: 1rem;
+    text-align: left;
+    /* Ensuring the text is aligned left */
+    width: 100%;
+}
+
+/* Style for the first sentence under Services */
+.service-description {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000000;
+    /* Lighter grey for this subheading */
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    /* Left alignment */
+    width: 80%;
+    margin-right: auto;
+}
+
+/* Style for the detailed service description */
+.service-details {
+    font-size: 1.1rem;
+    color: #495057;
+    /* Darker grey for the main description text */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    /* Bottom margin for spacing */
+    max-width: 800px;
+    /* Limit the width for readability */
+   
+    margin-right: auto;
+    text-align: left;
+    /* Left alignment */
+    width: 80%;
+}
+
+/* Add some responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 2.5rem;
+        /* Slightly smaller font size for smaller screens */
+    }
+
+    .service-description,
+    .service-details {
+        font-size: 1.1rem;
+        /* Adjust font size for readability */
+    }
+}
+
+/* Button styles */
+.explore-button {
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    /* White text */
+    border: none;
+    /* Remove border */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 12px 26px;
+    /* Space around the text */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition */
+    display: flex;
+    /* Flex to center text vertically */
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    /* Set fixed width */
+  margin-top: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Center the button */
+}
+
+/* Hover effect */
+.explore-button:hover {
+    background-color: #0056b3;
+    /* Darker blue when hovered */
+    transform: scale(1.05);
+    /* Slightly grow the button */
+}
+
+/* H1 styles inside the button */
+.explore-text {
+    font-size: 1.5rem;
+    /* Size of the text */
+    font-weight: bold;
+    /* Make text bold */
+    text-align: center;
+    /* Center align text */
+    margin: 0;
+    /* Remove default margin */
+}
+
+/* Optional: Make the button responsive */
+@media (max-width: 768px) {
+    .explore-button {
+        width: 150px;
+        /* Smaller button on smaller screens */
+        padding: 12px 25px;
+    }
+
+    .explore-text {
+        font-size: 1.2rem;
+        /* Adjust text size on small screens */
+    }
+}
+.img-hover-effect {
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+    /* Optimize for transform animation */
+}
+.img-hover-effect:hover {
+    transform: perspective(1200px) rotateX(10deg) rotateY(10deg) scale3d(1.1, 1.1, 1.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Social icons container */
+.social-icons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Individual social icon */
+.social-icon {
+    font-size: 30px;
+    /* Icon size */
+    color: #333;
+    /* Default icon color */
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect on social icons */
+.social-icon:hover {
+    color: #007bff;
+    /* Color change on hover */
+    transform: scale(1.2);
+    /* Slightly scale up the icon on hover */
+}
+
+/* Optional: Change color of individual icons */
+.social-icon:nth-child(1):hover {
+    color: #3b5998;
+    /* Facebook color */
+}
+
+.social-icon:nth-child(2):hover {
+    color: #e4405f;
+    /* Instagram color */
+}
+
+.social-icon:nth-child(3):hover {
+    color: #1da1f2;
+    /* Twitter color */
+}
+
+.social-icon:nth-child(4):hover {
+    color: #0077b5;
+    /* LinkedIn color */
+}
+
+.social-iconn:hover{
+color: #0077b5;
+cursor: pointer;
 }

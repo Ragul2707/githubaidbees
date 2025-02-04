@@ -4,8 +4,7 @@ import { useNavigate ,Link} from 'react-router-dom'; // Import useNavigate for p
 import './TopNavbar.css';
 import { FaAirbnb, FaUsers, FaClipboardList, FaMoneyBillWave } from 'react-icons/fa';
 import { Row, Col, Container,Card } from 'react-bootstrap';
-
-const Dummy = ({ toggleSidebar }) => {
+const Service = ({ toggleSidebar }) => {
   const navigate = useNavigate(); // Initialize navigate function
 
   // State to control modal visibility
@@ -23,7 +22,7 @@ const Dummy = ({ toggleSidebar }) => {
   };
 
   return (
-    <>
+   <>
       <nav style={{ backgroundColor: "transparent", borderBottom: "0.1px solid gray" }} className="navbar navbar-light navbar-expand-lg">
          <div  className='ms-3 mt-2'>
                   <i style={{fontSize:"40px"}} class="fa-solid fa-computer"></i>
@@ -39,7 +38,7 @@ const Dummy = ({ toggleSidebar }) => {
           <Link to="/company" className="nav-link nav-item text-grey px-4 ">Company</Link>
           <Link to="/consulting" className="nav-link nav-item text-grey px-4 ">Consulting Service</Link>
           <Link to="/contact" className="nav-link nav-item text-grey px-4 ">Contact Us</Link>
-          <Link to="/signup" className="nav-link nav-item text-grey px-4 ">Services</Link>
+          <Link to="/service" className="nav-link nav-item text-grey px-4 ">Services</Link>
         </div>
         <a className="navbar-brand"></a>
        <button onClick={handleLogout} className="btn btn-primary d-flex align-items-center fw-bold hover-effect me-2">
@@ -65,7 +64,7 @@ const Dummy = ({ toggleSidebar }) => {
                   {/* <h1 style={{fontSize:"20px",marginTop:"30px",color:"blue",textDecoration:"underline"}}>CONSULTANCY</h1> */}
                
                 <h1 className="text-dark" style={{fontSize:"60px", fontWeight:"bold",marginTop:"22px"}}>
-                    Company
+                    Service
                 </h1>
                 <p style={{color:"gray",marginTop:"70px"}}>
                   Collaborate. Create. Transform. Outperform.
@@ -94,17 +93,17 @@ Through innovation and technology, we breathe new life into your processes and a
 </Col> 
               <Col lg={6}>
               
-                  <h1 style={{fontSize:"20px",marginTop:"14px",color:"pink",textDecoration:"underline"}}>
-                   ABOUT Tekbay</h1>
-               
-                <h1 className="text-dark" style={{fontSize:"60px", fontWeight:"bold",marginTop:"22px"}}>
-                    Cutting-Edge IT Solutions, Cross-Sector Expertise, Global Insights
-                </h1>
-                <p style={{color:"gray",marginTop:"23px"}}>
-             We aim to be your success launchpad, guiding digital transformation through innovative software and analytics solutions, so you may emerge as industry leaders.
+                        <iframe
+        title="Tokyo Map"
+        width="100%"
+        height="400"
+        style={{ border: 0, borderRadius: "10px" }}
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103331.00136629767!2d139.64892454677047!3d35.68219350598892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b8570c1734d%3A0x48a3e2982141df84!2sTokyo%2C%20Japan!5e0!3m2!1sen!2sin!4v1706965281329"
+      ></iframe>
 
-“Challenging the existing quo and sprouting inventive alternatives that remodel your bottom line” is Tekbay’s key principle. Every project allows us to share praises and prospects, drive and execute best-in-class technology, and brainstorm effective tactics to launch ideas. Our organisation is a hotbed of unique ideas, and we operate with an entrepreneurial spirit and a thirst for knowledge. In a word, we at Tekbay want to combine introspective technology with human-centered organisations. 
-                </p>
               
                
               </Col>
@@ -169,7 +168,6 @@ Through innovation and technology, we breathe new life into your processes and a
           <hr style={{marginTop:"30px"}} />
 
   <Row>
-    <Link to="copyright">
      <Col lg={6}>
       <p>© 2022. All rights reserved by <a href="">Tekbay.</a></p>
      </Col>
@@ -183,14 +181,12 @@ Through innovation and technology, we breathe new life into your processes and a
      
       
       </Col>
-</Link>
+
   </Row>
 </div>
  </Container>
     </>
-
-    
   );
 };
 
-export default Dummy;
+export default Service;
