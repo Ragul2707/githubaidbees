@@ -147,7 +147,7 @@ const handleUpdate = async (e) => {
 
         <div className="mb-3">
           <label htmlFor="salary" className="form-label fw-bold">
-            Salaryy <FontAwesomeIcon icon={faIndianRupeeSign} className="me-2" />
+            Salaries <FontAwesomeIcon icon={faIndianRupeeSign} className="me-2" />
           </label>
           <input
             type="number"
