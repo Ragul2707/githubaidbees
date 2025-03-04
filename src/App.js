@@ -12,12 +12,14 @@ import Dummy from './Components/Dummy';
 import NgoTable from './Components/NgoTable';
 import NgoUser from './Components/NgoUser';
 import Service from './Components/Service';
+import UpdateEmployee from './Components/UpdateEmployee';
 
 
 const App = () => {
   return (
    
     <>
+    
     <Router>
       <Routes>
        <Route path='/side' element={<Sidebar/>}/>
@@ -31,7 +33,7 @@ const App = () => {
        <Route path='/consulting' element={<NgoTable/>} />
        <Route path='/contact' element={<NgoUser/>} />
        <Route path='/service' element={<Service/>} />
-      
+       <Route path='/update/:id' element={<UpdateEmployee/>} />
       </Routes>
     </Router>
 </>
